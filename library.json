@@ -1,0 +1,23 @@
+{
+	"name": "OTA",
+    "version": "1.0.0",
+    "description": "Library for managing OTA updates and WiFi functionality.",
+    "keywords": ["OTA", "WiFi", "Arduino"],
+	"license": "MIT",
+	"homepage": "https://none.de",
+	"frameworks": "Arduino",
+	"platforms": ["esp32","esp8266"],
+
+	"build": {
+		"includeDir": "."
+	},
+
+	"dependencies":
+	[
+		{
+			"owner": "codename666",
+			"name": "Events",
+			"version": "^2.2.1"
+		}
+	]	
+}
