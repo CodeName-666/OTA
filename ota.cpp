@@ -20,7 +20,11 @@ OTA::OTA(OTA_config_t& ota_config, WIFI_config_t& wifi_config) :
                 m_ota_update_ongoing(false)
 {
 
+}
 
+void OTA::begin(void)
+{
+    DBIF_INIT(115200);
     DBIF_LOG_INFO("Wifi Config:");
     DBIF_LOG_INFO("SSID: %s",wifi_config.ssid);
     DBIF_LOG_INFO("PSW: %s", wifi_config.ssid);
@@ -35,14 +39,7 @@ OTA::OTA(OTA_config_t& ota_config, WIFI_config_t& wifi_config) :
     DBIF_LOG_INFO("PSW %s", ota_config.ota_password);
     DBIF_LOG_INFO("ENABLED: %i",ota_config.ota_enabled);
     DBIF_LOG_INFO("REBOOT: %i", ota_config.reboot_on_success);
-
-
-
-
-}
-
-void OTA::begin(void)
-{
+    
     setHostname(m_ota_config->ota_device_name);
     setPassword(m_ota_config->ota_password);
     setPort(m_ota_config->port);
