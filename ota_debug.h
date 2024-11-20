@@ -52,5 +52,35 @@
   //#define DBIF_ON_CHANGE_ENABLE
 
   #include "Debug_If.h"
+#else 
+
+  #define DBIF_INIT(...) do {} while(0)
+
+  #define DBIF_LOG_DEBUG_3(...)  do {} while(0)
+  #define DBIF_LOG_DEBUG_3_ONCE(...) do {} while(0)
+
+  #define DBIF_LOG_DEBUG_2(...)  do {} while(0)
+  #define DBIF_LOG_DEBUG_2_ONCE(...) do {} while(0)
+
+  #define DBIF_LOG_DEBUG_1(...)  do {} while(0)
+  #define DBIF_LOG_DEBUG_1_ONCE(...) do {} while(0)
+
+  #define DBIF_LOG_DEBUG_0(...)  do {} while(0)
+  #define DBIF_LOG_DEBUG_0_ONCE(...) do {} while(0)
+
+  #define DBIF_LOG_INFO(...)  do {} while(0)
+  #define DBIF_LOG_INFO_ONCE(...) do {} while(0)
+
+  #define DBIF_LOG_WARN(...)  do {} while(0)
+  #define DBIF_LOG_WARN_ONCE(...)  do {} while(0)
+
+  #define DBIF_LOG_ERROR(...)  do {} while(0)
+  #define DBIF_LOG_ERROR_ONCE(OC_VAR,...) do {} while(0)
+
+  #define DBIF_SET_ON_CHANGE_VAR(...) do {} while(0)
+  #define DBIF_GET_ON_CHANGE_VAR(...) do {} while(0)
+  #define DBIF_ON_CHANGE_LOG_MACRO(...) do {} while(0)
+
+
 #endif
 #endif
